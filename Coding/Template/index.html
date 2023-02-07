@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <title>Eletivas Tecnologia</title>
+        <meta charset="utf-8"/>
+        <script src="../script.js"></script>
+        <script src="./meu_codigo.js"></script>
+        <style>
+            html, body {
+                margin: 0;
+                padding: 0;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            html {
+                width: 100%;
+                height: 100%;
+            }
+            body {
+                width: 50%;
+                min-width: 500px;
+                margin: 40px auto;
+            }
+            li {
+                margin-bottom: 10px;
+            }
+            #input {
+                border: 1px black solid;
+                border-radius: 10px;
+                width: calc(100% - 60px);
+                min-height: 100px;
+                margin: 0 auto;
+                padding: 10px;
+            }
+            #output {
+                padding-top: 20px;
+                padding-bottom: 20px;
+                border: 2px black dotted;
+                border-radius: 10px;
+                width: calc(100% - 80px);
+                min-height: 300px;
+                margin: 0 auto;
+            }
+        </style>
+    </head>
+    <body onload="_init()">
+        <h1>Eletivas de tecnologia</h1>
+
+        <section>
+            <article id="input-area">
+                <h2>Entrada de dados (input)</h2>
+                <form id="input" onsubmit="return _onInputSubmit(event);">
+                    
+                </form>
+            </article>
+            <article>
+                <h2>
+                    Saída de dados (output) 
+                    <button id="clear-output-button" onclick="_clearOutput()">Limpar</button>
+                </h2>
+                <ol id="output">
+
+                </ol>
+            </article>
+        </section>
+    </body>
+</html>
