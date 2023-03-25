@@ -68,7 +68,7 @@ Ao abrir, a página irá mostrar uma área de saída (_output_). Essa área irá
 > :information_source: **ATENÇÃO**<br/>
 > Ao utilizar qualquer uma dessa funções a ferramenta passará a exibir a área de entrada de dados em sua interface. Essa área consiste em um formulário com os campos para as entradas programadas.
 
-`criarEntradaDeText(nome, dica, conteudo)` cria um campo de texto na área de entrada de dados de acordo com as configurações. Resulta em um valor do tipo String, a ser entregue na lista de dados passada como argumento da função `recebeEntradas(entradas)` em _**meu_codigo.js**_. 
+`criarEntradaDeTexto(nome, dica, conteudo)` cria um campo de texto na área de entrada de dados de acordo com as configurações. Resulta em um valor do tipo String, a ser entregue na lista de dados passada como argumento da função `recebeEntradas(entradas)` em _**meu_codigo.js**_. 
 - Argumento `nome` cria um label para o campo de texto (String; obrigatório). 
 - Argumento `dica` insere um placeholder no campo de texto (String; obrigatório).
 - Argumento `conteudo` cria o campo com valor preenchido (String; opcional)
@@ -80,9 +80,15 @@ Ao abrir, a página irá mostrar uma área de saída (_output_). Essa área irá
 
 Os campos de texto e número criados na área de entrada da ferramenta são de preenchimento obrigatório para que o formulário seja submetido e a função `recebeEntradas`seja executada.
 
-`criarEntradaBooleana(nome, selecionado)` cria um checkbox
+`criarEntradaBooleana(nome, selecionado)` cria um checkbox. Para cada entrada do booleana criada, ao subter o formulário da área de entrada (pressionando o botão "Executar"), será entregue um valor booleano (true/false) de acordo com o setadao do checkbox (selecionado/nao selecionado), na mesma ordem em que os checkbox forem criados (isto é, na mesma ordem em que a função for invocada no código). 
+- Argumento `nome` cria um nome que será associado ao checkbox.
+- Argumento `selecionado` permite pré configurar o checkbox como selecionado ou não.
 
 #### Funções de saída de dados
- 
+
+`escreveNaTela(conteudo)` adiciona o conteúdo passado como argumento como conteúdo HTML da página de execução (arquivo _**index.html**_).
+- Argumento `conteudo` é o conteúdo que será adicionado na tela.
+
+> :information_source: a área de a saída é uma lista ordenada (elemento `ol` do HTML). Cada saída (resultado da chamada da função  `escreveNaTela` cria um novo item nessa lista (element `li` do HTML). 
 
 
